@@ -14,6 +14,7 @@ public class IssueCard {
         CheckBalance c = new CheckBalance(sc.nextInt());
         System.out.println("Enter balance of student:");
         c.payBal(sc.nextDouble());
+        sc.close();
         try{
             System.out.println("Depositing Fee");
             c.feePaymentCheck(94250.00);
@@ -22,6 +23,5 @@ public class IssueCard {
         } catch(FeePayException e){
             System.out.println("Admit card not issued!\nBalance left : Rs."+e.getFee());
         }
-        sc.close();
     }
 }
