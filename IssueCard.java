@@ -22,5 +22,6 @@ public class IssueCard {
         } catch(FeePayException e){
             System.out.println("Admit card not issued!\nBalance left : Rs."+e.getFee());
         }
+        sc.close();
     }
 }
